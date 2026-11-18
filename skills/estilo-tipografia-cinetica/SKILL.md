@@ -88,9 +88,9 @@ Os tamanhos, posições e cores desta tabela foram **estimados** de miniaturas d
 - **Risco sobre texto quebrado em duas linhas** cai entre as linhas. Use `white-space: nowrap` no texto riscado.
 - **Animar cor de fundo e de texto no mesmo `tl.to`** pinta o texto como bloco. Separe os alvos.
 - **A voz fala mais devagar que a estimativa do roteiro.** A voz levou 72,9 s em falas estimadas para 58 s. Meça antes de prometer duração.
-- **Sincronia sem transcritor local:** o `gerar.mjs` (em `modelo/` da skill `reels-narrado-hyperframes`) distribui as palavras pelos trechos de voz entre os silêncios, com peso pelo número de letras faladas. Ele aceita token com texto falado diferente do texto na tela (`{ d: 'US$ 1.500', s: 'mil e quinhentos dólares' }`) e marcas (`palavra@marca`) para disparar os gráficos na palavra certa.
+- **Sincronia sem transcritor local:** o `gerar.mjs` (em `modelo/` da skill `estudio-com-ia`) distribui as palavras pelos trechos de voz entre os silêncios, com peso pelo número de letras faladas. Ele aceita token com texto falado diferente do texto na tela (`{ d: 'US$ 1.500', s: 'mil e quinhentos dólares' }`) e marcas (`palavra@marca`) para disparar os gráficos na palavra certa.
 
-**O processo completo de um Reels (plano por trecho, preferências e recusas já testadas, motor `gerar.mjs`, finalização e medida) está na skill `reels-narrado-hyperframes`**, tirada da revisão do Reels 1 (v14, 16/11/2026). Quando ela divergir desta, vale ela.
+**O processo completo de um Reels (plano por trecho, preferências e recusas já testadas, motor `gerar.mjs`, finalização e medida) está na skill `estudio-com-ia`**, tirada da revisão do Reels 1 (v14, 16/11/2026). Quando ela divergir desta, vale ela.
 
 **Antes de construir ou revisar uma cena, leia `oficio-motion.md` (nesta pasta).** Ele traz as armadilhas do HyperFrames que a skill `hyperframes` não cobre (`lazy: false`, `immediateRender`, `transformOrigin`, desfoque de movimento, CSS embutido, duração `(N − 0,5)/fps`), as curvas por papel, a troca de cena com speed ramp e o tempo até o pico de cada efeito sonoro, para o som cair no quadro certo. Quando ele divergir daqui, vale esta skill.
 

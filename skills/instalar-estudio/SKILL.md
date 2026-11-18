@@ -1,6 +1,6 @@
 ---
 name: instalar-estudio
-description: Instalar e configurar o estúdio de vídeos com IA deste repositório no Claude Code, em Windows, macOS ou Linux. Confere o sistema, baixa e instala o que falta (Node 22+, ffmpeg/ffprobe, HyperFrames e o Chrome dele, as skills oficiais do HyperFrames e, se a pessoa quiser, o Python com o Whisper), copia as skills para `~/.claude/skills/` ou para o `.claude/skills/` de um projeto, oferece o setup opcional da voz (ElevenLabs) e do avatar (HeyGen) sem nunca pedir chave, e termina com um teste. Use quando a pessoa disser "instala as skills", "instala as skills do estúdio", "configura o estúdio", "como uso esse repositório", "acabei de clonar, e agora?", "falta o ffmpeg" ou "o estúdio não funciona", mesmo sem dizer "skill". NÃO use para fazer o vídeo (skill reels-narrado-hyperframes).
+description: Instalar e configurar o estúdio de vídeos com IA deste repositório no Claude Code, em Windows, macOS ou Linux. Confere o sistema, baixa e instala o que falta (Node 22+, ffmpeg/ffprobe, HyperFrames e o Chrome dele, as skills oficiais do HyperFrames e, se a pessoa quiser, o Python com o Whisper), copia as skills para `~/.claude/skills/` ou para o `.claude/skills/` de um projeto, oferece o setup opcional da voz (ElevenLabs) e do avatar (HeyGen) sem nunca pedir chave, e termina com um teste. Use quando a pessoa disser "instala as skills", "instala as skills do estúdio", "configura o estúdio", "como uso esse repositório", "acabei de clonar, e agora?", "falta o ffmpeg" ou "o estúdio não funciona", mesmo sem dizer "skill". NÃO use para fazer o vídeo (skill estudio-com-ia).
 ---
 
 # Instalar o estúdio de vídeos
@@ -19,7 +19,7 @@ Quem chama esta skill acabou de clonar o repositório e quer o estúdio funciona
 
 ## 1. Achar o repositório
 
-1. Confira que a pasta atual é o clone: tem que existir `skills/reels-narrado-hyperframes/SKILL.md` e `skills/estilo-tipografia-cinetica/SKILL.md`. Se não existir, pergunte onde a pessoa clonou e use esse caminho como `<repo>` daqui para a frente.
+1. Confira que a pasta atual é o clone: tem que existir `skills/estudio-com-ia/SKILL.md` e `skills/estilo-tipografia-cinetica/SKILL.md`. Se não existir, pergunte onde a pessoa clonou e use esse caminho como `<repo>` daqui para a frente.
 2. Diga em uma linha o que vai acontecer: checar o computador, instalar o que faltar, copiar as skills, configurar voz e avatar se ela quiser, e testar.
 
 ## 2. Ver o que já existe
@@ -99,7 +99,7 @@ O modelo `medium` baixa no primeiro uso da transcrição. Diga à pessoa como ro
    ```bash
    DEST="$HOME/.claude/skills"          # ou "<projeto>/.claude/skills"
    mkdir -p "$DEST"
-   cp -r "<repo>/skills/reels-narrado-hyperframes" "<repo>/skills/estilo-tipografia-cinetica" "$DEST/"
+   cp -r "<repo>/skills/estudio-com-ia" "<repo>/skills/estilo-tipografia-cinetica" "$DEST/"
    ```
    Pergunte se ela quer copiar também a `instalar-estudio` (útil para reinstalar ou consertar depois).
 4. Instale as skills oficiais do HyperFrames no mesmo destino, direto da fonte (`heygen-com/hyperframes`), só para o Claude Code:
@@ -126,7 +126,7 @@ Depois, peça o ID da voz que ela quer usar (não é segredo) e sugira anotar nu
 
 ## 6. Avatar: HeyGen (opcional)
 
-Pergunte se ela quer aparecer em vídeo com um avatar (digital twin). Se sim, siga `skills/reels-narrado-hyperframes/references/avatar-heygen.md`:
+Pergunte se ela quer aparecer em vídeo com um avatar (digital twin). Se sim, siga `skills/estudio-com-ia/references/avatar-heygen.md`:
 
 1. Criar o twin pelo site da HeyGen ou pelo conector/MCP oficial da HeyGen (30 a 60 s de webcam e o consentimento, que ela mesma aceita).
 2. Instalar o HeyGen CLI pela página oficial: você baixa e instala (no macOS e no Linux pelo script de instalação oficial; no Windows, o zip `heygen_v<versão>_windows_amd64.zip` da página de releases, com o `heygen.exe` em `~/.local/bin`). Confira com `heygen --version`.
@@ -144,11 +144,11 @@ Pergunte se ela quer aparecer em vídeo com um avatar (digital twin). Se sim, si
    ```
    O JSON do `check` tem que trazer `"ok": true` (testado com a v0.9.65 num projeto em branco; o progresso sai no stderr, o JSON no stdout). Se a pessoa quiser ver um vídeo de verdade, rode `npx --yes hyperframes render --quality draft --output teste.mp4` (de 1 a 3 min) e mande o arquivo.
 2. Se instalou o Whisper, confira com `~/.venvs/whisper/bin/python -c "import faster_whisper; print('ok')"` (no Windows, `Scripts/python`).
-3. Confira que as skills aparecem no Claude Code: peça para a pessoa digitar `/` e procurar `reels-narrado-hyperframes` e `estilo-tipografia-cinetica`, ou perguntar "quais skills você tem?". Se não aparecerem, ela fecha e abre o Claude Code (as skills são lidas ao abrir a sessão), na pasta certa no caso da instalação por projeto.
+3. Confira que as skills aparecem no Claude Code: peça para a pessoa digitar `/` e procurar `estudio-com-ia` e `estilo-tipografia-cinetica`, ou perguntar "quais skills você tem?". Se não aparecerem, ela fecha e abre o Claude Code (as skills são lidas ao abrir a sessão), na pasta certa no caso da instalação por projeto.
 4. Apague a pasta de teste.
 
 ## 8. Fechar
 
 Mostre um resumo: o que já existia, o que foi instalado (com a versão) e onde, o que ficou opcional e de fora, e o primeiro passo para o primeiro vídeo:
 
-> Abra o Claude Code na pasta onde vai guardar os vídeos e diga: "faz um Reels sobre <assunto>, com narração". A skill `reels-narrado-hyperframes` vai propor o roteiro e o plano do gancho antes de animar qualquer coisa.
+> Abra o Claude Code na pasta onde vai guardar os vídeos e diga: "faz um Reels sobre <assunto>, com narração". A skill `estudio-com-ia` vai propor o roteiro e o plano do gancho antes de animar qualquer coisa.

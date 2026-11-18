@@ -18,7 +18,7 @@
 // (pop-out) e efeitos visuais e sonoros do tema estúdio de vídeo (pedido do diretor em 17/11/2026).
 // Versão 1: só o hook (fala 1), no azul-noite, com o kit de efeitos dos Reels anteriores.
 // v1b: correções do check (sobreposição do v14, tempo do cronômetro, área segura, HUD do visor no rosto cheio).
-// Motor: gerar.mjs de um Reels anterior (v4), que vem do modelo da skill reels-narrado-hyperframes, com tempo de palavra pelo Whisper.
+// Motor: gerar.mjs de um Reels anterior (v4), que vem do modelo da skill estudio-com-ia, com tempo de palavra pelo Whisper.
 // Plano aprovado: roteiro-anotado-v1.md (17/11/2026). Identidade própria: azul-noite e amarelo, rosto sempre dentro do VISOR
 // de câmera de estúdio, cartão ERRO que vira REGRA e entra no SKILL.md.
 // Uso: node gerar.mjs            (vídeo inteiro com as falas já construídas)
@@ -1023,7 +1023,7 @@ if (N >= 12) {
 // "comenta ESTÚDIO": a palavra se monta letra por letra, o comentário "@você · ESTÚDIO" ganha coração e chega a DM de @seu.perfil.
 if (N >= 13) {
   const FIM13 = E(12), LETRAS = [...'ESTÚDIO'];
-  const PASTAS = ['reels-narrado-hyperframes', 'hyperframes', 'estilo-tipografia-cinetica'];
+  const PASTAS = ['estudio-com-ia', 'estilo-tipografia-cinetica', 'instalar-estudio'];
   cena(12, `<div class="c13-poll" id="c13poll"><b>VOCÊ PERCEBEU QUE ERA UM AVATAR?</b><div class="c13-bts"><span id="c13sim">SIM</span><span id="c13nao">NÃO</span></div></div>
   <div class="c13-repo" id="c13repo"><div class="c13-rcab"><i></i>Repositório no GitHub<em>skills</em></div>${PASTAS.map((n, i) => `<p id="c13r${i}"><i></i>${n}/<b>SKILL.md</b></p>`).join('')}</div>
   <div class="c13-big" id="c13big">${LETRAS.map((l, i) => `<span id="c13l${i}">${l}</span>`).join('')}</div>

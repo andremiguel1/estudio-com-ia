@@ -1,5 +1,5 @@
 ---
-name: reels-narrado-hyperframes
+name: estudio-com-ia
 description: Criar ou revisar um Reels 9:16 narrado em HyperFrames com gancho forte em tela dividida, uma imagem concreta por frase, algo novo a cada 3 a 5 s, vídeo no fundo, legenda palavra por palavra, sons pelo pico, CTA com botão de brilho (ou "comenta PALAVRA"), avatar da HeyGen só nos trechos com rosto (pop-out, tela cheia, plot twist) e entrega medida. Use SEMPRE que o usuário pedir "faz um Reels", "o gancho está fraco", "ajusta o trecho de X a Y segundos", "coloca um vídeo no fundo", "refaz o CTA", "revisa o Reels", "isso prende a atenção?", "monta o vídeo com meu avatar" ou "escreve a legenda do post", mesmo sem dizer "skill". Traz o processo (plano antes, um trecho por vez, versão salva), as preferências e recusas que já foram testadas, o motor `gerar.mjs`, os scripts de finalização e de medida e as armadilhas. NÃO use para publicar o vídeo.
 ---
 

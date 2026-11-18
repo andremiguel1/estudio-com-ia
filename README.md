@@ -19,7 +19,7 @@ As regras daqui saíram de dois Reels reais, revistos versão por versão: um de
 
 | Skill | Para que serve |
 |---|---|
-| `skills/reels-narrado-hyperframes/` | O processo completo de um Reels 9:16 narrado: plano antes de animar, um trecho por vez, gancho em tela dividida, uma imagem concreta por frase, algo novo a cada 3 a 5 s, sons alinhados pelo pico, CTA ("link na bio" ou "comenta PALAVRA"), avatar com a cabeça saindo do card e plot twist. Traz os dois motores (`modelo/gerar.mjs` e `modelo/gerar-avatar.mjs`), os scripts de finalização (−14 LUFS) e de medida de movimento, e as armadilhas já vistas. |
+| `skills/estudio-com-ia/` | O processo completo de um Reels 9:16 narrado: plano antes de animar, um trecho por vez, gancho em tela dividida, uma imagem concreta por frase, algo novo a cada 3 a 5 s, sons alinhados pelo pico, CTA ("link na bio" ou "comenta PALAVRA"), avatar com a cabeça saindo do card e plot twist. Traz os dois motores (`modelo/gerar.mjs` e `modelo/gerar-avatar.mjs`), os scripts de finalização (−14 LUFS) e de medida de movimento, e as armadilhas já vistas. |
 | `skills/estilo-tipografia-cinetica/` | O estilo visual: a legenda é o próprio vídeo, um cursor de "agente" opera mini-interfaces, uma só cor de destaque e um elemento novo a cada segundo. Traz os números (ritmo, tamanhos, curvas) e o `oficio-motion.md` com o ofício de motion e as armadilhas do HyperFrames. |
 | `skills/instalar-estudio/` | Instala e configura tudo, conversando com você: confere o sistema, baixa e instala o que faltar (Node, ffmpeg, HyperFrames e o Chrome dele, Whisper se você quiser), copia as skills, instala as skills oficiais do HyperFrames, configura voz e avatar se você quiser e faz um teste. |
 
@@ -41,14 +41,14 @@ Global (as skills valem em qualquer pasta), no macOS, Linux ou Git Bash:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -r skills/reels-narrado-hyperframes skills/estilo-tipografia-cinetica ~/.claude/skills/
+cp -r skills/estudio-com-ia skills/estilo-tipografia-cinetica ~/.claude/skills/
 ```
 
 No Windows (PowerShell):
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
-Copy-Item -Recurse skills\reels-narrado-hyperframes, skills\estilo-tipografia-cinetica "$HOME\.claude\skills\"
+Copy-Item -Recurse skills\estudio-com-ia, skills\estilo-tipografia-cinetica "$HOME\.claude\skills\"
 ```
 
 Só num projeto: copie as mesmas pastas para `<seu-projeto>/.claude/skills/`.
@@ -78,7 +78,7 @@ Abra o Claude Code na pasta onde vai guardar os vídeos e diga, por exemplo: *"f
 
 ## O que não vem aqui
 
-- **Arquivos de som, vídeos, fotos e o avatar.** Os motores esperam os seus arquivos em `assets/` (os nomes estão em `skills/reels-narrado-hyperframes/references/motor.md`). Use material seu ou com licença livre.
+- **Arquivos de som, vídeos, fotos e o avatar.** Os motores esperam os seus arquivos em `assets/` (os nomes estão em `skills/estudio-com-ia/references/motor.md`). Use material seu ou com licença livre.
 - **Chaves de API.** Nenhuma skill pede a sua chave: você faz o login em cada serviço.
 
 ## Custos

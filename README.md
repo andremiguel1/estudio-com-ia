@@ -29,8 +29,8 @@ As skills oficiais do HyperFrames (`hyperframes`, `hyperframes-cli`, `hyperframe
 
 1. Clone o repositório e abra o Claude Code dentro dele:
    ```bash
-   git clone https://github.com/<usuario>/<repositorio>.git
-   cd <repositorio>
+   git clone https://github.com/andremiguel1/estudio-de-videos-com-ia.git
+   cd estudio-de-videos-com-ia
    claude
    ```
 2. Peça: **"instala as skills do estúdio"**. O Claude confere o seu computador, mostra a lista do que falta e, depois do seu OK, baixa e instala tudo sozinho (winget no Windows, Homebrew no macOS, sem `sudo` no Linux). Você só faz os logins da voz e do avatar, se quiser usá-los.

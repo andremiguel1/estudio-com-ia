@@ -66,6 +66,13 @@ O critério é o de "um criador de conteúdo badass": o vídeo tem que fazer par
 - **Enquete no vídeo:** desenhada (SIM / NÃO, cursor passando pelos dois), sem porcentagem inventada. O sticker nativo do Instagram não foi usado.
 - **Final com folga:** a última chamada fica cerca de 2 s na tela (`cauda` na última fala, seção 12 do motor).
 
+## Capa do post
+
+- **Ofereça dois estilos e recomende o que não entrega a virada:** a capa na identidade do vídeo (título do gancho, objeto do vídeo, rosto saindo do card) e a capa no estilo thumbnail de YouTube. Num Reels anterior, a escolhida foi a thumbnail: "ERREI 13 VEZES" gigante com contorno preto, a v1 real com ✕ e uma seta até a v14 real com ✓, rosto grande recortado com contorno branco tipo adesivo e fundo escuro com brilho amarelo. A opção "ESSE NÃO SOU EU" foi descartada porque entregaria o twist.
+- **Rosto expressivo:** o avatar tem expressão contida (motor configurado para "menos entusiasmo"). Peça ao diretor do vídeo uma foto dele com expressão forte. Naquele Reels, a foto ficou bem mais forte que o quadro do avatar.
+- **Como fazer:** HTML de 1080×1920 numa pasta `capa/` do projeto, renderizado com um navegador headless. Com o Edge (Windows): `msedge --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-size=1080,1920 --virtual-time-budget=8000 --screenshot=<capa.png> file:///<caminho-do-html>`. No macOS e no Linux, use o Chrome headless com as mesmas flags (`google-chrome`, `chromium` ou o executável do Chrome no macOS). Fundo da foto removido com `npx hyperframes@0.9.46 remove-background foto.png -o recorte.png` (aceita imagem). Contorno branco: quatro `drop-shadow` de 6 px (direita, esquerda, cima, baixo) e uma sombra.
+- **Confira:** o essencial dentro do miolo 3:4 (y 240 a 1680, o recorte da grade do perfil) e a legibilidade numa miniatura de 360 px. Quadro de vídeo com recorte: extraia os dois com `-ss` **depois** do `-i` (busca exata), senão o rosto do card e o do recorte saem de momentos diferentes.
+
 ## Legenda do post
 
 - **Mini hook que não entrega e não proíbe.** "Assiste até o fim antes de abrir esta legenda" foi recusado: "é exatamente o que a pessoa vai fazer… o gatilho da curiosidade é um dos mais fortes". "Assista até o fim…" foi aprovado.
